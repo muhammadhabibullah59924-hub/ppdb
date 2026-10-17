@@ -5,6 +5,11 @@
 
     RewriteEngine On
 
+    # Proyek ini dijalankan lewat Alias XAMPP di sub-folder /ppdb
+    # (http://localhost/ppdb/), jadi RewriteBase harus disetel ke situ
+    # agar URL seperti /ppdb/daftar tidak berputar (error 500).
+    RewriteBase /ppdb/
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

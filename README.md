@@ -31,12 +31,16 @@ ppdb/
 ```
 
 ## ▶️ Cara Menjalankan
-1. Pastikan sudah terpasang PHP 8.3 di `C:\php83` (terpisah dari XAMPP)
-   — jika belum, ikuti [RENCANA_PROYEK.md](RENCANA_PROYEK.md)
-2. Buka folder `ppdb`, **klik 2× `jalankan-server.bat`**
-3. Buka browser, ketik: **http://127.0.0.1:8000**
+1. Pastikan PHP 8.3 terpasang di `C:\php83` dan `C:\php83x86`
+   (keduanya terpasang otomatis mengikuti [RENCANA_PROYEK.md](RENCANA_PROYEK.md))
+2. Buka **XAMPP Control Panel**, klik **Start** pada **Apache**
+3. Buka browser, ketik: **http://localhost/ppdb/**
 
-> Alternatif via terminal: `C:\php83\php.exe artisan serve`
+> Apache XAMPP kini langsung menjalankan Laravel (modul PHP 8.3 + Alias
+> `/ppdb` di `httpd-xampp.conf`) — tanpa `artisan serve`.
+>
+> Cadangan jika Apache tidak bisa dipakai: **klik 2× `jalankan-server.bat`**
+> lalu buka `http://127.0.0.1:8000`.
 >
 > Database MySQL (`db_ppdb`) dijalankan lewat **phpMyAdmin XAMPP**
 > (MySQL bawaan XAMPP tetap dipakai untuk menyimpan data).
