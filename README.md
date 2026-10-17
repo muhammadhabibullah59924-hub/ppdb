@@ -1,8 +1,8 @@
-# 🎓 PPDB Online — Sistem Informasi Penerimaan Peserta Didik Baru
+# 🎓 PPDB Online — MI Ihyaul Islam
 
-Proyek jangka waktu **1 semester** (16 pertemuan) dari kegiatan PKL.
+Sistem Informasi Penerimaan Peserta Didik Baru, proyek jangka waktu **1 semester** (16 pertemuan) dari kegiatan PKL.
 Masalah yang ditemukan: proses PPDB yang masih **manual** (antre serah berkas,
-pencatatan di buku/Excel) sehingga data mudah hilah & pengumuman lambat.
+pencatatan di buku/Excel) sehingga data mudah hilang & pengumuman lambat.
 
 ## 📸 Tampilan
 Landing page dibuat dengan HTML + CSS murni (tanpa framework) agar mudah dipahami pemula.
@@ -13,6 +13,8 @@ ppdb/
 ├── index.html          # Tampilan awal (landing page)
 ├── css/
 │   └── style.css       # Gaya tampilan
+├── images/
+│   └── hero-bg.svg     # Background hero (SVG, ringan & offline)
 ├── RENCANA_PROYEK.md   # Rencana per pertemuan (1 semester)
 └── README.md
 ```

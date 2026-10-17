@@ -147,7 +147,11 @@ img { max-width: 100%; }
    6. HERO (Bagian besar paling atas)
    ============================================================ */
 .hero {
-    background: linear-gradient(135deg, var(--biru) 0%, var(--biru-terang) 100%);
+    /* Background gambar + lapisan gelap (overlay) supaya tulisan tetap terbaca */
+    background:
+        linear-gradient(rgba(15, 23, 42, 0.70), rgba(15, 23, 42, 0.80)),
+        url("../images/hero-bg.svg") center/cover no-repeat,
+        var(--biru);
     color: var(--putih);
     text-align: center;
     padding: 80px 0 60px;
@@ -181,25 +185,26 @@ img { max-width: 100%; }
     display: flex;
     gap: 14px;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 36px;
 }
 
 
-/* Statistik (angka ringkasan) */
-.statistik {
+/* Chips (keterangan kecil di bawah tombol) */
+.chips {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
-.stat strong {
-    display: block;
-    font-size: 32px;
-    color: #fde047;
+.chip {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    backdrop-filter: blur(4px);   /* efek kaca tipis */
 }
-
-.stat span { font-size: 14px; opacity: 0.9; }
 
 
 /* ============================================================
@@ -395,5 +400,5 @@ img { max-width: 100%; }
     /* Tabel bisa digeser ke samping */
     .tabel { display: block; overflow-x: auto; }
 
-    .statistik { gap: 24px; }
+    .chips { gap: 8px; }
 }

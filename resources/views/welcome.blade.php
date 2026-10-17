@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     TAMPILAN AWAL — PPDB ONLINE (versi Laravel / Blade)
+     Bahasa markup : HTML5 + Blade (template engine Laravel)
+     Fungsi file ini : Halaman utama / landing page
+                      yang dilihat pertama kali oleh pengunjung.
+     Lokasi file    : resources/views/welcome.blade.php
+     Route          : routes/web.php  →  Route::get('/', ...)
+     ============================================================ -->
+
+<html lang="id">
+
+<head>
+    <!-- Karakter yang dipakai supaya huruf Indonesia tampil benar -->
+    <meta charset="UTF-8">
+
+    <!-- Agar tampilan bagus di layar HP (responsive) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Judul tab browser, diambil dari APP_NAME di file .env -->
+    <title>{{ config('app.name') }}</title>
+
+    <!-- asset() = helper Laravel yang menunjuk folder public/
+         jadi CSS dicari di public/css/style.css -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- ============================================================
+         BAGIAN 1 : NAVBAR (Menu atas)
+         Struktur umumnya : <nav> berisi <ul> berisi <li> berisi <a>
+         ============================================================ -->
+    <nav class="navbar">
+        <div class="container nav-inner">
+
+            <!-- Logo / nama sekolah -->
+            <a href="#" class="logo">
+                <span class="logo-ikon">🎓</span>
+                <span>MI Ihyaul Islam <small>PPDB Online</small></span>
+            </a>
+
+            <!-- Daftar menu. Dibungkus <ul> agar rapi & mudah diatur -->
+            <ul class="menu">
+                <li><a href="#beranda" class="aktif">Beranda</a></li>
+                <li><a href="#alur">Alur Pendaftaran</a></li>
+                <li><a href="#jadwal">Jadwal</a></li>
+                <li><a href="#pengumuman">Pengumuman</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+
+            <!-- Tombol login panitia/admin -->
+            <a href="#" class="btn btn-kecil">Login Panitia</a>
+        </div>
+    </nav>
+
+
+    <!-- ============================================================
+         BAGIAN 2 : HERO (Bagian besar paling atas)
+         Berisi judul, keterangan singkat, dan tombol aksi.
+         ============================================================ -->
+    <header class="hero" id="beranda">
+        <div class="container hero-isi">
+            <p class="badge">📅 Tahun Ajaran 2026 / 2027</p>
+
+            <h1>Penerimaan Peserta Didik Baru <span>100% Online</span></h1>
+
+            <p class="hero-teks">
+                Daftar dari rumah tanpa antre, unggah berkas dengan mudah,
+                dan pantau hasil seleksi secara transparan.
+            </p>
+
+            <!-- Dua tombol utama -->
+            <div class="hero-tombol">
+                <a href="#" class="btn btn-utama">📝 Daftar Sekarang</a>
+                <a href="#alur" class="btn btn-kosong">Lihat Alur →</a>
+            </div>
+
+            <!-- Keterangan singkat tentang PPDB -->
+            <div class="chips">
+                <span class="chip">✅ Pendaftaran Gratis</span>
+                <span class="chip">📱 Bisa dari HP</span>
+                <span class="chip">🔒 Data Aman</span>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ============================================================
+         BAGIAN 3 : ALUR PENDAFTARAN
+         Terdiri dari 4 kartu (card) berurutan.
+         Triknya : tiap kartu dibungkus <div class="kartu">
+         ============================================================ -->
+    <section class="bagian" id="alur">
+        <div class="container">
+            <h2 class="judul-bagian">Alur Pendaftaran</h2>
+            <p class="sub-judul">Hanya 4 langkah mudah, bisa dari HP masing-masing</p>
+
+            <div class="grid grid-4">
+                <!-- Kartu 1 -->
+                <div class="kartu">
+                    <div class="kartu-angka">1</div>
+                    <h3>Buat Akun</h3>
+                    <p>Daftar memakai email dan NISN untuk membuat akun pendaftar.</p>
+                </div>
+
+                <!-- Kartu 2 -->
+                <div class="kartu">
+                    <div class="kartu-angka">2</div>
+                    <h3>Isi Formulir</h3>
+                    <p>Lengkapi data diri, data orang tua, dan pilihan jurusan.</p>
+                </div>
+
+                <!-- Kartu 3 -->
+                <div class="kartu">
+                    <div class="kartu-angka">3</div>
+                    <h3>Unggah Berkas</h3>
+                    <p>Scan rapor, akta kelahiran, dan KK lalu unggah ke sistem.</p>
+                </div>
+
+                <!-- Kartu 4 -->
+                <div class="kartu">
+                    <div class="kartu-angka">4</div>
+                    <h3>Cek Pengumuman</h3>
+                    <p>Pantau status verifikasi dan lihat hasil seleksi on time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         BAGIAN 4 : JADWAL
+         Menggunakan tabel <table> karena data berbentuk baris2.
+         ============================================================ -->
+    <section class="bagian abu" id="jadwal">
+        <div class="container">
+            <h2 class="judul-bagian">Jadwal Penting</h2>
+            <p class="sub-judul">Catat tanggalnya, jangan sampai terlewat!</p>
+
+            <table class="tabel">
+                <thead>
+                    <tr>
+                        <th>Kegiatan</th>
+                        <th>Gelombang 1</th>
+                        <th>Gelombang 2</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pendaftaran Daring</td>
+                        <td>1 – 15 Mei</td>
+                        <td>16 – 30 Mei</td>
+                        <td><span class="tag tag-buka">Dibuka</span></td>
+                    </tr>
+                    <tr>
+                        <td>Verifikasi Berkas</td>
+                        <td>16 – 18 Mei</td>
+                        <td>31 Mei – 2 Juni</td>
+                        <td><span class="tag tag-proses">Proses</span></td>
+                    </tr>
+                    <tr>
+                        <td>Pengumuman Seleksi</td>
+                        <td>22 Mei</td>
+                        <td>6 Juni</td>
+                        <td><span class="tag tag-tutup">Belum</span></td>
+                    </tr>
+                    <tr>
+                        <td>Daftar Ulang</td>
+                        <td>23 – 25 Mei</td>
+                        <td>7 – 9 Juni</td>
+                        <td><span class="tag tag-tutup">Belum</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         BAGIAN 5 : PENGUMUMAN + FAQ
+         ============================================================ -->
+    <section class="bagian" id="pengumuman">
+        <div class="container dua-kolom">
+
+            <!-- Kolom kiri : daftar pengumuman -->
+            <div>
+                <h2 class="judul-bagian kiri">Pengumuman Terbaru</h2>
+
+                <div class="kartu pengumuman">
+                    <span class="tag tag-buka">Penting</span>
+                    <h3>Pendaftaran Gelombang 1 Dibuka</h3>
+                    <p>Pendaftaran daring dibuka mulai 1 Mei pukul 08.00 WIB.</p>
+                </div>
+
+                <div class="kartu pengumuman">
+                    <span class="tag tag-proses">Info</span>
+                    <h3>Perpanjangan Batas Unggah Berkas</h3>
+                    <p>Batas unggah berkas diperpanjang hingga 14 Mei.</p>
+                </div>
+
+                <div class="kartu pengumuman">
+                    <span class="tag tag-tutup">Baru</span>
+                    <h3>Pengumuman Kelulusan Gelombang 2</h3>
+                    <p>Dapat dilihat melalui menu "Cek Hasil" menggunakan NISN.</p>
+                </div>
+            </div>
+
+            <!-- Kolom kanan : tanya jawab (FAQ) -->
+            <div id="faq">
+                <h2 class="judul-bagian kiri">FAQ</h2>
+
+                <details class="faq">
+                    <summary>Apakah pendaftaran dipungut biaya?</summary>
+                    <p>Tidak. PPDB online ini gratis, hati-hati terhadap pungutan.</p>
+                </details>
+
+                <details class="faq">
+                    <summary>Bisa mendaftar lewat HP?</summary>
+                    <p>Bisa. Halaman ini responsif sehingga nyaman dibuka di HP.</p>
+                </details>
+
+                <details class="faq">
+                    <summary>Berkas apa saja yang dibutuhkan?</summary>
+                    <p>Akta kelahiran, kartu keluarga, rapor, dan pas foto 3×4.</p>
+                </details>
+
+                <details class="faq">
+                    <summary>Lupa kata sandi akun?</summary>
+                    <p>Gunakan menu "Lupa Password" atau hubungi panitia PPDB.</p>
+                </details>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         BAGIAN 6 : AJAKAN MENDAFTAR (Call to Action)
+         ============================================================ -->
+    <section class="cta">
+        <div class="container">
+            <h2>Siap Mendaftar?</h2>
+            <p>Siapkan berkas kamu, lalu daftar sekarang juga.</p>
+            <a href="#" class="btn btn-utama">📝 Mulai Pendaftaran</a>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         BAGIAN 7 : FOOTER (Bagian bawah)
+         ============================================================ -->
+    <footer class="footer">
+        <div class="container footer-isi">
+            <div>
+                <h4>PPDB Online</h4>
+                <p>Sistem Penerimaan Peserta Didik Baru<br>MI Ihyaul Islam.</p>
+            </div>
+            <div>
+                <h4>Tautan</h4>
+                <p><a href="#alur">Alur Pendaftaran</a><br>
+                   <a href="#jadwal">Jadwal</a><br>
+                   <a href="#faq">FAQ</a></p>
+            </div>
+            <div>
+                <h4>Kontak Panitia</h4>
+                <p>📞 0812-0000-0000<br>✉️ ppdb@sekolah.sch.id</p>
+            </div>
+        </div>
+        <p class="copyright">© 2026 PPDB Online — Dibuat untuk Proyek PKP Semester Ganjil</p>
+    </footer>
+
+</body>
+
+</html>

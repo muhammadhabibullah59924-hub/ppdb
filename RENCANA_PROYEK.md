@@ -4,7 +4,7 @@
 ---
 
 ## 🎯 Judul Proyek
-**Sistem Informasi Penerimaan Peserta Didik Baru (PPDB) Online Berbasis Web**
+**Sistem Informasi Penerimaan Peserta Didik Baru (PPDB) Online Berbasis Web — MI Ihyaul Islam**
 
 ## 🐛 Masalah yang ditemukan di PKL
 > Proses PPDB di sekolah masih manual: calon siswa mengantre untuk menyerahkan
