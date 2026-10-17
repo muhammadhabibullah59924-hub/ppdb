@@ -56,9 +56,10 @@
     <nav class="navbar">
         <div class="container nav-inner">
 
-            <!-- Logo / nama sekolah -->
+            <!-- Logo / nama sekolah. Gambar logonya ada di public/images/logo.jpg -->
             <a href="{{ route('beranda') }}" class="logo">
-                <span class="logo-ikon">MI</span>
+                <img class="logo-ikon" src="{{ asset('images/logo.jpg') }}"
+                     alt="Logo MI Ihyaul Islam">
                 <span class="logo-teks">
                     MI Ihyaul Islam
                     <small>PPDB Online</small>
@@ -102,7 +103,8 @@
         <div class="container footer-isi">
 
             <div class="footer-kolom footer-perkenalan">
-                <span class="logo-ikon footer-ikon">MI</span>
+                <img class="logo-ikon footer-ikon" src="{{ asset('images/logo.jpg') }}"
+                     alt="Logo MI Ihyaul Islam">
                 <h4>PPDB Online</h4>
                 <p>Sistem Penerimaan Peserta Didik Baru
                    MI Ihyaul Islam — daftar dari rumah, tanpa antre.</p>

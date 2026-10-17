@@ -49,35 +49,8 @@
     </div>
 </header>
 
-
 {{-- ============================================================
-     BAGIAN 2 : STATISTIK (Angka-angka penting)
-     Dipisah dengan garis putus-tipis supaya terlihat rapi.
-     ============================================================ --}}
-<section class="statistik">
-    <div class="container grid grid-4">
-        <div class="stat">
-            <strong>250+</strong>
-            <span>Siswa Terdaftar</span>
-        </div>
-        <div class="stat">
-            <strong>15</strong>
-            <span>Tahun Berdiri</span>
-        </div>
-        <div class="stat">
-            <strong>24</strong>
-            <span>Guru & Staf</span>
-        </div>
-        <div class="stat">
-            <strong>2</strong>
-            <span>Gelombang Pendaftaran</span>
-        </div>
-    </div>
-</section>
-
-
-{{-- ============================================================
-     BAGIAN 3 : ALUR PENDAFTARAN
+     BAGIAN 2 : ALUR PENDAFTARAN
      Terdiri dari 4 kartu (card) berurutan.
      Triknya : tiap kartu dibungkus <div class="kartu">
      ============================================================ --}}
@@ -118,7 +91,7 @@
 
 
 {{-- ============================================================
-     BAGIAN 4 : JADWAL
+     BAGIAN 3 : JADWAL
      Menggunakan tabel <table> karena data berbentuk baris-baris.
      ============================================================ --}}
 <section class="bagian abu" id="jadwal">
@@ -167,7 +140,7 @@
 
 
 {{-- ============================================================
-     BAGIAN 5 : PENGUMUMAN + FAQ (dua kolom berdampingan)
+     BAGIAN 4 : PENGUMUMAN + FAQ (dua kolom berdampingan)
      ============================================================ --}}
 <section class="bagian" id="pengumuman">
     <div class="container dua-kolom">
@@ -226,7 +199,7 @@
 
 
 {{-- ============================================================
-     BAGIAN 6 : AJAKAN MENDAFTAR (Call to Action)
+     BAGIAN 5 : AJAKAN MENDAFTAR (Call to Action)
      ============================================================ --}}
 <section class="cta">
     <div class="container">

@@ -114,19 +114,14 @@ img { max-width: 100%; }
     color: var(--biru-tua);
 }
 
-/* Kotak logo "MI" — bentuk membulat, warna gradasi biru */
+/* Logo sekolah berupa gambar (public/images/logo.jpg).
+   object-fit: cover = gambar memenuhi kotak, bagian lebih panjang terpotong
+   (sehingga logo tidak melar/terlihat gepeng). */
 .logo-ikon {
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, var(--biru), var(--biru-tua));
-    color: var(--putih);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    font-weight: 800;
-    letter-spacing: 1px;
+    object-fit: cover;
+    border-radius: 12px;     /* sudut membulat, mengikuti gaya situs */
     flex-shrink: 0;          /* ukuran tidak menyusut */
 }
 
@@ -272,31 +267,7 @@ img { max-width: 100%; }
 
 
 /* ============================================================
-   7. STATISTIK (Angka penting di bawah hero)
-   ============================================================ */
-.statistik {
-    border-bottom: 1px solid var(--garis);
-    padding: 34px 0;
-}
-
-.stat { text-align: center; }
-
-.stat strong {
-    display: block;
-    font-size: 32px;
-    font-weight: 800;
-    color: var(--biru-tua);
-}
-
-.stat span {
-    font-size: 14px;
-    color: var(--teks-redup);
-    font-weight: 600;
-}
-
-
-/* ============================================================
-   8. BAGIAN ISI (SECTION)
+   7. BAGIAN ISI (SECTION)
    ============================================================ */
 .bagian { padding: 76px 0; }
 .bagian.abu { background: var(--biru-kabut); }   /* bagian dengan latar biru sangat muda */
@@ -319,7 +290,7 @@ img { max-width: 100%; }
 
 
 /* ============================================================
-   9. KARTU (CARD)
+   8. KARTU (CARD)
    Dipakai untuk alur pendaftaran & pengumuman.
    ============================================================ */
 .kartu {
@@ -356,7 +327,7 @@ img { max-width: 100%; }
 
 
 /* ============================================================
-   10. TABEL JADWAL
+   9. TABEL JADWAL
    ============================================================ */
 .tabel {
     width: 100%;
@@ -402,7 +373,7 @@ img { max-width: 100%; }
 
 
 /* ============================================================
-   11. DUA KOLOM (Pengumuman + FAQ)
+   10. DUA KOLOM (Pengumuman + FAQ)
    ============================================================ */
 .dua-kolom {
     display: flex;
@@ -439,7 +410,7 @@ img { max-width: 100%; }
 
 
 /* ============================================================
-   12. CTA (Ajakan Mendaftar)
+   11. CTA (Ajakan Mendaftar)
    ============================================================ */
 .cta {
     background: linear-gradient(135deg, var(--biru), var(--biru-tua));
@@ -453,7 +424,7 @@ img { max-width: 100%; }
 
 
 /* ============================================================
-   13. FOOTER
+   12. FOOTER
    ============================================================ */
 .footer {
     background: var(--teks);
@@ -493,7 +464,7 @@ img { max-width: 100%; }
 
 
 /* ============================================================
-   14. RESPONSIVE (tampilan di HP / layar kecil)
+   13. RESPONSIVE (tampilan di HP / layar kecil)
    Media query = "kalau lebar layar < 768px, atur seperti ini"
    ============================================================ */
 @media (max-width: 768px) {
@@ -528,8 +499,6 @@ img { max-width: 100%; }
     .hero { padding: 60px 0 50px; }
     .hero h1 { font-size: 30px; }
     .hero-teks { font-size: 16px; }
-
-    .stat strong { font-size: 26px; }
 
     .bagian { padding: 50px 0; }
     .judul-bagian { font-size: 26px; }
