@@ -73,10 +73,16 @@
 ## 🧰 Teknologi yang Digunakan
 - **HTML5** — struktur halaman
 - **CSS3** — tampilan/hiasan halaman
-- **PHP** — logika program (mulai pertemuan 10)
-- **MySQL** — penyimpanan data (via phpMyAdmin)
-- **XAMPP** — server lokal di laptop
+- **PHP 8.3** (`C:\php83`) — logika program (terpisah dari PHP 5.6 bawaan XAMPP)
+- **Laravel 13** — framework PHP: routing (`routes/web.php`), view Blade (`resources/views/`), database Eloquent
+- **MySQL/MariaDB** — penyimpanan data via phpMyAdmin (database `db_ppdb`, sudah dibuat)
+- **XAMPP** — server MySQL lokal di laptop
+- **Composer** — pengelola paket Laravel
 - **GitHub** — penyimpanan & publikasi kode
+
+> 📌 **Catatan migrasi:** sesuai keputusan, proyek menggunakan **Laravel**
+> (bukan PHP native). Jalankan server dengan klik 2× `jalankan-server.bat`
+> lalu buka `http://127.0.0.1:8000`.
 
 ## ✅ Status Proyek
 - [x] Pertemuan 1–4 : Analisis & Perancangan
@@ -84,4 +90,10 @@
 - [x] Pertemuan 6 : **Tampilan awal (landing page)** ← posisi sekarang
 - [ ] Pertemuan 7 : Perapian CSS
 - [ ] Pertemuan 8 : Responsive
-- [ ] Pertemuan 9–16 : tahap berikutnya
+- [ ] Pertemuan 9 : Database `db_ppdb` + tabel (migrasi Laravel)
+- [ ] Pertemuan 10 : Formulir pendaftaran (model, controller, validasi)
+- [ ] Pertemuan 11–16 : tahap berikutnya
+
+> 📝 **Catatan (17 Okt 2026):** Proyek disusun ulang dari tampilan awal.
+> Fitur pendaftaran (form, database, controller) dilepas dulu agar tiap
+> pertemuan terlihat bertahap di GitHub. Fitur menyusul di pertemuan 9–12.
