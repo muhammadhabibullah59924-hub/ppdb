@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +20,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Kompatibilitas dengan MariaDB/MySQL lama (XAMPP):
+        // batas index 767 bytes → varchar maksimal 191 karakter
+        Schema::defaultStringLength(191);
     }
 }
